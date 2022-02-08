@@ -1,32 +1,5 @@
-[package]
-edition = "2021"
-name = "bridge-scrims"
-version = "0.1.0"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
-base64 = "0.13.0"
-chrono = "0.4"
-dirs = "4.0.0"
-dotenv = "0.15.0"
-lazy_static = "1.4.0"
-serde = "1.0.117"
-serde_json = "1.0.71"
-sqlite = "0.26.0"
-tracing = "0.1.29"
-tracing-subscriber = "0.3.1"
-toml = "0.5.8"
-
-[dependencies.time]
-features = ["local-offset"]
-version = "0.3.5"
-
-[dependencies.serenity]
-default-features = false
-features = ["builder", "cache", "client", "gateway", "model", "http", "utils", "unstable_discord_api", "rustls_backend"]
-version = "0.10.10"
-
-[dependencies.tokio]
-features = ["full"]
-version = "1.13.0"
+[workspace]
+members = [
+    "bot",
+    "convert-prefab"
+]
