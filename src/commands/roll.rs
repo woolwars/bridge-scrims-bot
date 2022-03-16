@@ -202,7 +202,7 @@ impl Command for Teams {
             return Ok(());
         }
 
-        let channel_id = voice_state.unwrap().channel_id.unwrap();
+        let channel_id = voice_state.unwrap().channel_id.unwrap();  
         let channel = channel_id
             .to_channel_cached(&ctx.cache)
             .await
